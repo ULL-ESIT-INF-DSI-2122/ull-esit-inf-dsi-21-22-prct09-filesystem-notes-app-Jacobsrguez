@@ -17,7 +17,7 @@ export function add(firstNumber: number, secondNumber: number) {
 /**
  * Substracts two numbers
  * @param firstNumber Consists of the first numeric operand of the substraction
- * @param secondNumber Consists of the second numeric operand of the substraction
+ * @param secondNumber Consists of the second numeric operand of the substractio
  * @return The substraction of the two numbers `firstNumber` and `secondNumber`
  *
  * Usage:

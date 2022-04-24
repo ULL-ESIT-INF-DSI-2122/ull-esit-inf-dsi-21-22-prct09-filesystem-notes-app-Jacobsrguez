@@ -1,6 +1,5 @@
 // eslint-disable-next-line quotes
-import { MapReduce } from "./mapReduce";
+// import {MapReduce} from "./mapReduce";
 
-class ProdMapReduce extends MapReduce {
-  
-}
+// class ProdMapReduce extends MapReduce {
+// }

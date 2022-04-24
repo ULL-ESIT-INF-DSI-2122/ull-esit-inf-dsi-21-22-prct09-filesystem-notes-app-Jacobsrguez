@@ -1,7 +1,7 @@
 import {Note} from './nota';
 import * as fs from 'fs';
 import * as chalk from 'chalk';
-
+import {Color} from './nota';
 export class Method {
   constructor() {}
   /**
@@ -29,12 +29,9 @@ export class Method {
    * @param body body nuevo de la nota
    * @param color color nuevo de la nota
    */
-  public edit(owner: string, title: string, body: string, color: string): void {
+  public edit(owner: string, title: string, body: string, color: Color): void {
     if (fs.existsSync(`./${owner}/${title}.json`)) {
-      // eslint-disable-next-line max-len
-      const nota = JSON.parse(fs.readFileSync(`./${owner}/${title}.json`, 'utf8'));
-      nota.setBody(body);
-      nota.setColor(color);
+      const nota = new Note(title, body, color);
       fs.writeFileSync(`./${owner}/${title}.json`, JSON.stringify(nota));
       console.log(chalk.green(`La Nota ${title} ha sido modificada con exito`));
     } else {

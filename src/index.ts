@@ -3,6 +3,9 @@ import * as chalk from 'chalk';
 import {Note} from './nota';
 import {Method} from './method';
 
+/**
+ * Comando add que añade una nota
+ */
 yargs.command({
   command: 'add',
   describe: 'Añadir una nueva nota',
@@ -42,6 +45,9 @@ yargs.command({
   },
 });
 
+/**
+ * Comando edit que modifica las notas
+ */
 yargs.command({
   command: 'edit',
   describe: 'Modificar una nota existente',
@@ -81,6 +87,9 @@ yargs.command({
   },
 });
 
+/**
+ * Comando remove que elimina una nota
+ */
 yargs.command({
   command: 'remove',
   describe: 'Eliminar una nota',
@@ -103,6 +112,9 @@ yargs.command({
   },
 });
 
+/**
+ * Comando list que muestra todas las notas de un usuario
+ */
 yargs.command({
   command: 'list',
   describe: 'Listar todas las notas',
@@ -120,9 +132,12 @@ yargs.command({
   },
 });
 
+/**
+ * Comando show que muestra una nota
+ */
 yargs.command({
-  command: 'read',
-  describe: 'Muestra una cancions',
+  command: 'show',
+  describe: 'Muestra una cancion',
   builder: {
     user: {
       describe: 'Usuario de la nota',
